@@ -275,7 +275,7 @@ body {
   }
 }
 
-/* == ElectricPulse Top Navigation Redesign == */
+/* == VoltView Top Navigation Redesign == */
 :root {
   --ep-topnav-h: 58px;
   --ep-topnav-bg: #0b1123;
@@ -421,8 +421,8 @@ body {
 }
 /* End Top Navigation Bar */
 
-/* ElectricPulse Neon Sci-Fi Theme v1.0
-   Author: ElectricPulse Team (2025)
+/* VoltView Neon Sci-Fi Theme v1.0
+   Author: VoltView Team (2025)
    All legacy, experimental, unused, and duplicated rules removed.  
    Prefix: ep-
 */
@@ -1422,7 +1422,7 @@ body {
   width: 580px;
 }
 
-/* ==== ElectricPulse Dashboard New LIVE/STATUS/ACTIONS WIDGETS ==== */
+/* ==== VoltView Dashboard New LIVE/STATUS/ACTIONS WIDGETS ==== */
 .ep-status-strip {
   display: flex;
   gap: 13px;
@@ -2524,7 +2524,7 @@ canvas.live-waveform-canvas {
   }
 }
 
-/* == ElectricPulse Settings Page Modern Stretch Layout & Controls == */
+/* == VoltView Settings Page Modern Stretch Layout & Controls == */
 .ep-card.settings-section {
   width: 97vw;
   max-width: 1760px;
