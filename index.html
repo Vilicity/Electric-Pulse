@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -44,7 +45,8 @@
         <div class="live-waveform-card">
           <div class="live-waveform-title">Live Voltage Waveform</div>
           <div class="live-waveform-graph-bg">
-            <canvas id="liveVoltageChart" class="live-waveform-canvas" width="552" height="110"></canvas>
+            <canvas id="liveVoltageChart" class="live-waveform-canvas" style="display: none;"></canvas>
+            <canvas id="liveWaveChart" class="live-wave-glow-canvas"></canvas>
           </div>
           <div class="live-waveform-btn-row">
             <button class="live-waveform-btn" id="goto-analytics">VIEW ANALYTICS</button>
@@ -133,15 +135,15 @@
       </div>
     </div>
     <section class="ep-graphs-grid" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:2.2rem; margin:2.5rem 0;">
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Live Power Trend</div><canvas id="live-power-trend" height="144"></canvas></div>
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Live Voltage Trend</div><canvas id="live-voltage-trend" height="144"></canvas></div>
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Live Current Trend</div><canvas id="live-current-trend" height="144"></canvas></div>
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Load Score Trend</div><canvas id="live-loadscore-trend" height="144"></canvas></div>
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Efficiency Trend</div><canvas id="live-efficiency-trend" height="144"></canvas></div>
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Sensor Jitter</div><canvas id="live-jitter-trend" height="144"></canvas></div>
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Packet Integrity</div><canvas id="live-packet-trend" height="144"></canvas></div>
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Temperature</div><canvas id="live-temp-trend" height="144"></canvas></div>
-      <div class="ep-glow-card graph-card"><div class="ep-card-title">Frequency</div><canvas id="live-freq-trend" height="144"></canvas></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Live Power Trend</div><div class="live-metric-chart-container"><canvas id="chart-power"></canvas></div></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Live Voltage Trend</div><div class="live-metric-chart-container"><canvas id="chart-voltage"></canvas></div></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Live Current Trend</div><div class="live-metric-chart-container"><canvas id="chart-current"></canvas></div></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Load Score Trend</div><div class="live-metric-chart-container"><canvas id="chart-loadscore"></canvas></div></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Efficiency Trend</div><div class="live-metric-chart-container"><canvas id="chart-efficiency"></canvas></div></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Sensor Jitter</div><div class="live-metric-chart-container"><canvas id="chart-jitter"></canvas></div></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Packet Integrity</div><div class="live-metric-chart-container"><canvas id="chart-packet"></canvas></div></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Temperature</div><div class="live-metric-chart-container"><canvas id="chart-temp"></canvas></div></div>
+      <div class="ep-glow-card graph-card"><div class="ep-card-title">Frequency</div><div class="live-metric-chart-container"><canvas id="chart-freq"></canvas></div></div>
     </section>
     <footer class="ep-footer">VoltView Dashboard &copy; 2025</footer>
   </main>
