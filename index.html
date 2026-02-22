@@ -31,11 +31,26 @@
       <a href="help.html" class="ep-navbtn">Help</a>
     </nav>
   </header>
+  </div>
+
+  <!-- Added simple Login/Signup UI -->
+  <div id="auth-container" style="padding:1rem; max-width: 380px; margin-left: 220px;">
+    <h2>Login / Signup</h2>
+    <form id="auth-form">
+      <input type="email" id="email" placeholder="Email" required style="width:100%; padding:8px; margin-bottom:8px;" />
+      <input type="password" id="password" placeholder="Password" required style="width:100%; padding:8px; margin-bottom:8px;" />
+      <button type="submit">Login / Signup</button>
+    </form>
+    <div id="auth-message" style="margin-top:10px; color: red;"></div>
+    <div id="user-info" style="margin-top:10px;"></div>
+    <button id="logout-btn" style="display:none; margin-top:10px;">Logout</button>
+  </div>
+
   <div class="ep-dashboard-searchbar">
     <input type="text" id="ep-quicksearch" placeholder="🔎 Search dashboard functions..." autocomplete="off"/>
     <div id="ep-quicksearch-results" class="ep-search-results"></div>
   </div>
-  <main class="ep-content" style="margin-left:220px;">
+  <main class="ep-content" style="margin-left:220px;" id="main-content" hidden>
     <div id="ep-live-alert"></div>
     <div id="ep-activity-feed"></div>
     <!-- DASHBOARD WRAPPER FOR STRUCTURED LAYOUT -->

@@ -633,10 +633,10 @@ body {
 
 /* Widen the connected devices container/table section */
 .ep-table-section-neon {
-  max-width: 1600px;
-  min-width: 800px;
-  margin: 32px auto 32px auto;
-  padding: 2.5rem 3vw 2.5rem 3vw;
+  max-width: 1000px;
+  min-width: 0;
+  margin: 32px auto 32px calc((100vw - 1000px) / 2.7);
+  padding: 1.2rem 1vw;
   background: rgba(14, 24, 38, 0.83);
   border-radius: 20px;
   box-shadow: 0 0 34px #09ffe077, 0 2px 18px #00eaea55;
@@ -647,11 +647,11 @@ body {
 }
 
 .ep-table-title-neon {
-  font-size: 2.1rem;
+  font-size: 1.48rem;
   color: #0ff;
   margin-bottom: 2.2rem;
   text-align: left;
-  padding-left: 0.3em;
+  padding-left: 0.28em;
   font-weight: 900;
   text-shadow: 0 0 24px #16fefa97, 0 0 12px #00fff799;
 }
@@ -1379,22 +1379,24 @@ body {
   border-spacing: 0;
   table-layout: auto;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   background: var(--ep-table-bg);
   border-radius: 13px;
   overflow: hidden;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   font-size: 1.15rem;
   box-shadow: 0 0 27px 0 #0ff5, 0 2px 16px #05d6ff44;
 }
 
 .ep-table th, .ep-table td {
-  padding: 16px 24px;
-  font-size: 1.13em;
+  padding: 11px 14px;
+  font-size: 1em;
   white-space: nowrap;
   text-align: center;
 }
 .ep-table th {
-  font-size: 1.17em;
+  font-size: 1.08em;
   letter-spacing: 0.07em;
 }
 
@@ -1431,6 +1433,14 @@ body {
   font-size: 0.97em;
   margin-bottom: 7px;
   color: #63fc95;
+}
+
+#auth-container {
+  display: block;
+}
+
+#main-content[hidden] {
+  display: none !important;
 }
 .ep-dot {
   display: inline-block;
@@ -1610,9 +1620,19 @@ body {
 }
 
 @media (max-width: 700px) {
+  .ep-table-section-neon {
+    min-width: 0;
+    max-width: 99vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  #ep-devices-table-outer {
+    overflow-x: auto;
+  }
   .ep-table {
+    min-width: 480px;
     width: 94vw;
-    font-size: 0.96em;
+    font-size: 0.95em;
   }
   .ep-table-card {
     max-width: 98vw;
@@ -2017,7 +2037,7 @@ input[type=checkbox].ep-checkbox {
 
 /* == Live Voltage Waveform Card == */
 .live-waveform-card {
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px calc((100vw - 600px) / 2.7);
   width: 600px;
   max-width: 98vw;
   min-width: 330px;
